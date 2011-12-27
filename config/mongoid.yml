@@ -1,0 +1,17 @@
+development:
+  host: localhost
+  database: pool_dev
+  allow_dynamic_fields: false
+
+test:
+  host: localhost
+  database: pool_test
+  allow_dynamic_fields: false
+
+production:
+  host: <%= ENV['MONGOID_HOST'] %>
+  port: <%= ENV['MONGOID_PORT'] %>
+  username: <%= ENV['MONGOID_USERNAME'] %>
+  password: <%= ENV['MONGOID_PASSWORD'] %>
+  database: <%= ENV['MONGOID_DATABASE'] %>
+  allow_dynamic_fields: false
